@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial:wght@300;400;600;700;800&display=swap');
+@import './partials/variables';
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $black;
+    color: $white;
+    font-family: $default-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin: 0;
+}
+
+h1 {
+    color: $white;
+}
+
+.screen {
+    cursor: pointer;
+    width: 50%;
+    background-color: #000 !important;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;   
+}
+
+.controls {
+    background-color: #333;
+    color: $white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    .btn {
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        &:focus{
+            outline: 0;
+        }
+    }
+    .fa-play {
+        color: #28a745;
+    }
+    .fa-stop {
+        color: #dc3545;
+    }
+    .fa-pause {
+        color: #fff;
+    }
+    .timestamp {
+        color: #fff;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 800px){
+    .screen,
+    .controls {
+        width: 90%;
+    }
+}
